@@ -13,6 +13,9 @@ namespace CashRegister
 {
     public partial class textBox : Form
     {
+        // Created by me, Ian Elliott
+        // submitted on October 22nd 2019
+        // a working cash register
         double steakCost = 46;
         double lobsterCost = 59;
         double pieCost = 23;
@@ -39,6 +42,9 @@ namespace CashRegister
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            // the part of the display where a customer enters numbers into a text box
+            // converted by the variables up top
+            
             numOfSteaks = Convert.ToInt32(steakBox.Text);
             numOfLobsters = Convert.ToInt32(lobsterBox.Text);
             numOfPies = Convert.ToInt32(pieBox.Text);
@@ -80,6 +86,7 @@ namespace CashRegister
 
         private void receiptButton_Click(object sender, EventArgs e)
         {
+            // the animation, display and sound effects of a working typewriter
             Graphics g = this.CreateGraphics();  
             SolidBrush whiteBrush = new SolidBrush(Color.White);
             SolidBrush blackBrush = new SolidBrush(Color.Black);
@@ -148,6 +155,7 @@ namespace CashRegister
 
         private void button1_Click(object sender, EventArgs e)
         {
+           // the "tendered" box is just where the customer enters the money
             tendered = Convert.ToInt32(tenderedBox.Text);
 
             change = tendered - total;
@@ -156,6 +164,7 @@ namespace CashRegister
 
         private void newOrderButton_Click(object sender, EventArgs e)
         {
+            // the new order button resets the labels and text boxes
             Graphics g = this.CreateGraphics();
             SolidBrush redBrush = new SolidBrush(Color.Red);
 
